@@ -1,5 +1,3 @@
-import chalk from "chalk"
-
 export default async function checkList(list){
     const urls = getURLS(list)
     const status = await checkStatus(urls)
@@ -21,7 +19,6 @@ async function checkStatus(urls){
     const promises = urls.map(async (url) => {
         try{
             const res = await fetch(url)
-            //console.log("res:", res)
             return res.status
         }catch(error){
             return manageError(error)
@@ -37,19 +34,3 @@ function manageError(error){
         return error
     }
 }
-
-
-// 
-
-
-/* // It does the same thing:
-
-function getURLS(list){
-    const urls = list.map((obj)=>{
-        for (var i in obj){
-            return obj[i]
-        }
-    })
-
-    return urls
-} */

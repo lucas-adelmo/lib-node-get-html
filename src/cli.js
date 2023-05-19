@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 
-/* CLI means COMMAND-LINE INTERFACE; A command-line interface (CLI) is a text-based user interface (UI) used to run programs, manage computer files and interact with the computer. Command-line interfaces are also called command-line user interfaces, console user interfaces and character user interfaces. */
+// CLI means COMMAND-LINE INTERFACE; A command-line interface (CLI) is a text-based user interface (UI) used to 
+// run programs, manage computer files and interact with the computer. Command-line interfaces are also called 
+// command-line user interfaces, console user interfaces and character user interfaces.
 
 import chalk from 'chalk';
 import fs from 'fs';
@@ -8,8 +10,7 @@ import { readFile, error } from './index.js';
 import checkList from './http-check.js';
 
 
-let commandLineArgs = process.argv // node ./src/cli.js ./archives/texto.md 
-
+let commandLineArgs = process.argv // process.argv returns an array which contains the whole command-line invocation
 
 async function showLinks(check, list, id=''){
     
